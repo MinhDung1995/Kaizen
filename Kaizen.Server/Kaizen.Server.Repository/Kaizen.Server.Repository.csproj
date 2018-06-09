@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Kaizen.Server.Common\Kaizen.Server.Common.csproj" />
+    <ProjectReference Include="..\Kaizen.Server.DataAccess\Kaizen.Server.DataAccess.csproj" />
+    <ProjectReference Include="..\Kaizen.Server.Repository.Interface\Kaizen.Server.Repository.Interface.csproj" />
   </ItemGroup>
 </Project>

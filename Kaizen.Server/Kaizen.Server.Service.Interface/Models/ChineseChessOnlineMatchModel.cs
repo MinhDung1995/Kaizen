@@ -1,9 +1,10 @@
 using System;
+using System.Collections.Generic;
 using Kaizen.Server.Common.Enums;
 
-namespace Kaizen.Server.DataAccess.Models
+namespace Kaizen.Server.Service.Interface.Models
 {
-    public class ChineseChessOnlineMatch
+    public class ChineseChessOnlineMatchModel
     {
         public long Id { get; set; }
 

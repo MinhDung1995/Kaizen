@@ -1,7 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+  <ItemGroup>
+    <ProjectReference Include="..\Kaizen.Server.Common\Kaizen.Server.Common.csproj" />
+    <ProjectReference Include="..\Kaizen.Server.Repository.Interface\Kaizen.Server.Repository.Interface.csproj" />
+    <ProjectReference Include="..\Kaizen.Server.Service.Interface\Kaizen.Server.Service.Interface.csproj" />
+    <ProjectReference Include="..\Kaizen.Server.DataAccess\Kaizen.Server.DataAccess.csproj" />
+  </ItemGroup>
+
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
 </Project>

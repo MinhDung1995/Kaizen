@@ -5,6 +5,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Kaizen.Server.DataAccess;
+using Kaizen.Server.Repository.Interface;
+using Kaizen.Server.Repository;
+using Kaizen.Server.Service.Interface.Services;
+using Kaizen.Server.Service;
 
 namespace Kaizen.Server.WebApi
 {
@@ -20,9 +24,11 @@ namespace Kaizen.Server.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<KaizenDbContext>(opt => 
-                opt.UseSqlServer(@"Server=DESKTOP-78QL2UU\SQLEXPRESS;Database=KaiZen;Trusted_Connection=True;MultipleActiveResultSets=true"));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddDbContext<KaizenDbContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("SqlServer")));
+            services.AddScoped<IUnitOfWork<KaizenDbContext>, UnitOfWork<KaizenDbContext>>();
+            services.AddScoped<IUnitOfWork>(provider => provider.GetService<IUnitOfWork<KaizenDbContext>>());
+            services.AddScoped<IChineseChessService, ChineseChessService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

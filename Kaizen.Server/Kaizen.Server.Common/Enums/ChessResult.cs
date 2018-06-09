@@ -1,4 +1,4 @@
-namespace Kaizen.Server.DataAccess.Enums
+namespace Kaizen.Server.Common.Enums
 {
     public enum ChessResult : short
     {

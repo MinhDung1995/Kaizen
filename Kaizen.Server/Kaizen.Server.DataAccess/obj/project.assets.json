@@ -4333,6 +4333,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "Kaizen.Server.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Kaizen.Server.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Kaizen.Server.Common.dll": {}
+        }
       }
     }
   },
@@ -11497,10 +11507,16 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "Kaizen.Server.Common/1.0.0": {
+      "type": "project",
+      "path": "../Kaizen.Server.Common/Kaizen.Server.Common.csproj",
+      "msbuildProject": "../Kaizen.Server.Common/Kaizen.Server.Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "Kaizen.Server.Common >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.1.0",
       "Microsoft.NETCore.App >= 2.1.0"
     ]
@@ -11512,11 +11528,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.DataAccess\\Kaizen.Server.DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.DataAccess\\Kaizen.Server.DataAccess.csproj",
       "projectName": "Kaizen.Server.DataAccess",
-      "projectPath": "c:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.DataAccess\\Kaizen.Server.DataAccess.csproj",
+      "projectPath": "C:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.DataAccess\\Kaizen.Server.DataAccess.csproj",
       "packagesPath": "C:\\Users\\Nhuan Thanh\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.DataAccess\\obj\\",
+      "outputPath": "C:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -11534,7 +11550,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.Common\\Kaizen.Server.Common.csproj": {
+              "projectPath": "C:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.Common\\Kaizen.Server.Common.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

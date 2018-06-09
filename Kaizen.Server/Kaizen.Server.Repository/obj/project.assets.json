@@ -213,7 +213,8 @@
           "lib/netcoreapp2.1/_._": {}
         },
         "build": {
-          "build/netcoreapp2.1/_._": {}
+          "build/netcoreapp2.1/Microsoft.AspNetCore.App.props": {},
+          "build/netcoreapp2.1/Microsoft.AspNetCore.App.targets": {}
         }
       },
       "Microsoft.AspNetCore.Authentication/2.1.0": {
@@ -1021,7 +1022,8 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Razor.Extensions.dll": {}
         },
         "build": {
-          "build/netstandard2.0/_._": {}
+          "build/netstandard2.0/Microsoft.AspNetCore.Mvc.Razor.Extensions.props": {},
+          "build/netstandard2.0/Microsoft.AspNetCore.Mvc.Razor.Extensions.targets": {}
         }
       },
       "Microsoft.AspNetCore.Mvc.Razor.ViewCompilation/2.1.0": {
@@ -1031,7 +1033,7 @@
           "Microsoft.AspNetCore.Mvc.RazorPages": "2.1.0"
         },
         "build": {
-          "build/netstandard2.0/_._": {}
+          "build/netstandard2.0/Microsoft.AspNetCore.Mvc.Razor.ViewCompilation.targets": {}
         }
       },
       "Microsoft.AspNetCore.Mvc.RazorPages/2.1.0": {
@@ -1123,10 +1125,10 @@
       "Microsoft.AspNetCore.Razor.Design/2.1.0": {
         "type": "package",
         "build": {
-          "build/netstandard2.0/_._": {}
+          "build/netstandard2.0/Microsoft.AspNetCore.Razor.Design.props": {}
         },
         "buildMultiTargeting": {
-          "buildMultiTargeting/_._": {}
+          "buildMultiTargeting/Microsoft.AspNetCore.Razor.Design.props": {}
         }
       },
       "Microsoft.AspNetCore.Razor.Language/2.1.0": {
@@ -1654,7 +1656,7 @@
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Design.dll": {}
         },
         "build": {
-          "build/netcoreapp2.0/_._": {}
+          "build/netcoreapp2.0/Microsoft.EntityFrameworkCore.Design.props": {}
         }
       },
       "Microsoft.EntityFrameworkCore.InMemory/2.1.0": {
@@ -1871,7 +1873,8 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.UserSecrets.dll": {}
         },
         "build": {
-          "build/netstandard2.0/_._": {}
+          "build/netstandard2.0/Microsoft.Extensions.Configuration.UserSecrets.props": {},
+          "build/netstandard2.0/Microsoft.Extensions.Configuration.UserSecrets.targets": {}
         }
       },
       "Microsoft.Extensions.Configuration.Xml/2.1.0": {
@@ -1973,10 +1976,12 @@
           "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Embedded.dll": {}
         },
         "build": {
-          "build/netstandard2.0/_._": {}
+          "build/netstandard2.0/Microsoft.Extensions.FileProviders.Embedded.props": {},
+          "build/netstandard2.0/Microsoft.Extensions.FileProviders.Embedded.targets": {}
         },
         "buildMultiTargeting": {
-          "buildMultiTargeting/_._": {}
+          "buildMultiTargeting/Microsoft.Extensions.FileProviders.Embedded.props": {},
+          "buildMultiTargeting/Microsoft.Extensions.FileProviders.Embedded.targets": {}
         }
       },
       "Microsoft.Extensions.FileProviders.Physical/2.1.0": {
@@ -4364,19 +4369,6 @@
         },
         "runtime": {
           "bin/placeholder/Kaizen.Server.Repository.Interface.dll": {}
-        }
-      },
-      "Kaizen.Server.Service.Interface/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.1",
-        "dependencies": {
-          "Kaizen.Server.Common": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Kaizen.Server.Service.Interface.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Kaizen.Server.Service.Interface.dll": {}
         }
       }
     }
@@ -11557,19 +11549,13 @@
       "type": "project",
       "path": "../Kaizen.Server.Repository.Interface/Kaizen.Server.Repository.Interface.csproj",
       "msbuildProject": "../Kaizen.Server.Repository.Interface/Kaizen.Server.Repository.Interface.csproj"
-    },
-    "Kaizen.Server.Service.Interface/1.0.0": {
-      "type": "project",
-      "path": "../Kaizen.Server.Service.Interface/Kaizen.Server.Service.Interface.csproj",
-      "msbuildProject": "../Kaizen.Server.Service.Interface/Kaizen.Server.Service.Interface.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "Kaizen.Server.Common >= 1.0.0",
       "Kaizen.Server.DataAccess >= 1.0.0",
       "Kaizen.Server.Repository.Interface >= 1.0.0",
-      "Kaizen.Server.Service.Interface >= 1.0.0",
+      "Microsoft.AspNetCore.App >= 2.1.0",
       "Microsoft.NETCore.App >= 2.1.0"
     ]
   },
@@ -11580,11 +11566,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.Service\\Kaizen.Server.Service.csproj",
-      "projectName": "Kaizen.Server.Service",
-      "projectPath": "C:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.Service\\Kaizen.Server.Service.csproj",
+      "projectUniqueName": "C:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.Repository\\Kaizen.Server.Repository.csproj",
+      "projectName": "Kaizen.Server.Repository",
+      "projectPath": "C:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.Repository\\Kaizen.Server.Repository.csproj",
       "packagesPath": "C:\\Users\\Nhuan Thanh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.Service\\obj\\",
+      "outputPath": "C:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.Repository\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -11603,17 +11589,11 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.Common\\Kaizen.Server.Common.csproj": {
-              "projectPath": "C:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.Common\\Kaizen.Server.Common.csproj"
-            },
             "C:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.DataAccess\\Kaizen.Server.DataAccess.csproj": {
               "projectPath": "C:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.DataAccess\\Kaizen.Server.DataAccess.csproj"
             },
             "C:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.Repository.Interface\\Kaizen.Server.Repository.Interface.csproj": {
               "projectPath": "C:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.Repository.Interface\\Kaizen.Server.Repository.Interface.csproj"
-            },
-            "C:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.Service.Interface\\Kaizen.Server.Service.Interface.csproj": {
-              "projectPath": "C:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.Service.Interface\\Kaizen.Server.Service.Interface.csproj"
             }
           }
         }
@@ -11627,6 +11607,10 @@
     "frameworks": {
       "netcoreapp2.1": {
         "dependencies": {
+          "Microsoft.AspNetCore.App": {
+            "target": "Package",
+            "version": "[2.1.0, )"
+          },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",

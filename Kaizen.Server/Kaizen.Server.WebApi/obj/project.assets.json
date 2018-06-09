@@ -4334,10 +4334,21 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
+      "Kaizen.Server.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Kaizen.Server.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Kaizen.Server.Common.dll": {}
+        }
+      },
       "Kaizen.Server.DataAccess/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
+          "Kaizen.Server.Common": "1.0.0",
           "Microsoft.AspNetCore.App": "2.1.0"
         },
         "compile": {
@@ -4345,6 +4356,63 @@
         },
         "runtime": {
           "bin/placeholder/Kaizen.Server.DataAccess.dll": {}
+        }
+      },
+      "Kaizen.Server.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Kaizen.Server.DataAccess": "1.0.0",
+          "Kaizen.Server.Repository.Interface": "1.0.0",
+          "Microsoft.AspNetCore.App": "2.1.0"
+        },
+        "compile": {
+          "bin/placeholder/Kaizen.Server.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Kaizen.Server.Repository.dll": {}
+        }
+      },
+      "Kaizen.Server.Repository.Interface/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Microsoft.AspNetCore.App": "2.1.0"
+        },
+        "compile": {
+          "bin/placeholder/Kaizen.Server.Repository.Interface.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Kaizen.Server.Repository.Interface.dll": {}
+        }
+      },
+      "Kaizen.Server.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Kaizen.Server.Common": "1.0.0",
+          "Kaizen.Server.DataAccess": "1.0.0",
+          "Kaizen.Server.Repository.Interface": "1.0.0",
+          "Kaizen.Server.Service.Interface": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Kaizen.Server.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Kaizen.Server.Service.dll": {}
+        }
+      },
+      "Kaizen.Server.Service.Interface/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Kaizen.Server.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Kaizen.Server.Service.Interface.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Kaizen.Server.Service.Interface.dll": {}
         }
       }
     }
@@ -11511,15 +11579,45 @@
         "system.xml.xpath.xdocument.nuspec"
       ]
     },
+    "Kaizen.Server.Common/1.0.0": {
+      "type": "project",
+      "path": "../Kaizen.Server.Common/Kaizen.Server.Common.csproj",
+      "msbuildProject": "../Kaizen.Server.Common/Kaizen.Server.Common.csproj"
+    },
     "Kaizen.Server.DataAccess/1.0.0": {
       "type": "project",
       "path": "../Kaizen.Server.DataAccess/Kaizen.Server.DataAccess.csproj",
       "msbuildProject": "../Kaizen.Server.DataAccess/Kaizen.Server.DataAccess.csproj"
+    },
+    "Kaizen.Server.Repository/1.0.0": {
+      "type": "project",
+      "path": "../Kaizen.Server.Repository/Kaizen.Server.Repository.csproj",
+      "msbuildProject": "../Kaizen.Server.Repository/Kaizen.Server.Repository.csproj"
+    },
+    "Kaizen.Server.Repository.Interface/1.0.0": {
+      "type": "project",
+      "path": "../Kaizen.Server.Repository.Interface/Kaizen.Server.Repository.Interface.csproj",
+      "msbuildProject": "../Kaizen.Server.Repository.Interface/Kaizen.Server.Repository.Interface.csproj"
+    },
+    "Kaizen.Server.Service/1.0.0": {
+      "type": "project",
+      "path": "../Kaizen.Server.Service/Kaizen.Server.Service.csproj",
+      "msbuildProject": "../Kaizen.Server.Service/Kaizen.Server.Service.csproj"
+    },
+    "Kaizen.Server.Service.Interface/1.0.0": {
+      "type": "project",
+      "path": "../Kaizen.Server.Service.Interface/Kaizen.Server.Service.Interface.csproj",
+      "msbuildProject": "../Kaizen.Server.Service.Interface/Kaizen.Server.Service.Interface.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "Kaizen.Server.Common >= 1.0.0",
       "Kaizen.Server.DataAccess >= 1.0.0",
+      "Kaizen.Server.Repository >= 1.0.0",
+      "Kaizen.Server.Repository.Interface >= 1.0.0",
+      "Kaizen.Server.Service >= 1.0.0",
+      "Kaizen.Server.Service.Interface >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.1.0",
       "Microsoft.NETCore.App >= 2.1.0"
     ]
@@ -11554,8 +11652,23 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
+            "C:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.Common\\Kaizen.Server.Common.csproj": {
+              "projectPath": "C:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.Common\\Kaizen.Server.Common.csproj"
+            },
             "C:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.DataAccess\\Kaizen.Server.DataAccess.csproj": {
               "projectPath": "C:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.DataAccess\\Kaizen.Server.DataAccess.csproj"
+            },
+            "C:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.Repository.Interface\\Kaizen.Server.Repository.Interface.csproj": {
+              "projectPath": "C:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.Repository.Interface\\Kaizen.Server.Repository.Interface.csproj"
+            },
+            "C:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.Repository\\Kaizen.Server.Repository.csproj": {
+              "projectPath": "C:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.Repository\\Kaizen.Server.Repository.csproj"
+            },
+            "C:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.Service.Interface\\Kaizen.Server.Service.Interface.csproj": {
+              "projectPath": "C:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.Service.Interface\\Kaizen.Server.Service.Interface.csproj"
+            },
+            "C:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.Service\\Kaizen.Server.Service.csproj": {
+              "projectPath": "C:\\Users\\Nhuan Thanh\\Desktop\\Kaizen\\Kaizen.Server\\Kaizen.Server.Service\\Kaizen.Server.Service.csproj"
             }
           }
         }
