@@ -25,6 +25,7 @@ namespace Kaizen.Server.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            
             services.AddDbContext<KaizenDbContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("SqlServer")));
             services.AddScoped<IUnitOfWork<KaizenDbContext>, UnitOfWork<KaizenDbContext>>();
             services.AddScoped<IUnitOfWork>(provider => provider.GetService<IUnitOfWork<KaizenDbContext>>());

@@ -5,11 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.0" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Kaizen.Server.Common\Kaizen.Server.Common.csproj" />
-    <ProjectReference Include="..\Kaizen.Server.Entity\Kaizen.Server.Entity.csproj" />
   </ItemGroup>
 </Project>

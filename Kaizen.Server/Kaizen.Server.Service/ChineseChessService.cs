@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using Kaizen.Server.DataAccess.Models;
-using Kaizen.Server.Repository.Interface;
-using Kaizen.Server.Service.Interface.Models;
-using Kaizen.Server.Service.Interface.Services;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Kaizen.Server.Entity;
+using Kaizen.Server.Repository.Interface;
+using Kaizen.Server.Service.Interface.Models;
+using Kaizen.Server.Service.Interface.Services;
 
 namespace Kaizen.Server.Service
 {

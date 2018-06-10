@@ -1,4 +1,4 @@
-using Kaizen.Server.DataAccess.Models;
+using Kaizen.Server.Entity;
 using Microsoft.EntityFrameworkCore;
 
 namespace Kaizen.Server.DataAccess

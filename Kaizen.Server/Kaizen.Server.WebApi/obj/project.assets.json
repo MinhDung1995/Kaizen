@@ -4349,6 +4349,7 @@
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
           "Kaizen.Server.Common": "1.0.0",
+          "Kaizen.Server.Entity": "1.0.0",
           "Microsoft.AspNetCore.App": "2.1.0"
         },
         "compile": {
@@ -4356,6 +4357,19 @@
         },
         "runtime": {
           "bin/placeholder/Kaizen.Server.DataAccess.dll": {}
+        }
+      },
+      "Kaizen.Server.Entity/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Kaizen.Server.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Kaizen.Server.Entity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Kaizen.Server.Entity.dll": {}
         }
       },
       "Kaizen.Server.Repository/1.0.0": {
@@ -4391,7 +4405,7 @@
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
           "Kaizen.Server.Common": "1.0.0",
-          "Kaizen.Server.DataAccess": "1.0.0",
+          "Kaizen.Server.Entity": "1.0.0",
           "Kaizen.Server.Repository.Interface": "1.0.0",
           "Kaizen.Server.Service.Interface": "1.0.0"
         },
@@ -11588,6 +11602,11 @@
       "type": "project",
       "path": "../Kaizen.Server.DataAccess/Kaizen.Server.DataAccess.csproj",
       "msbuildProject": "../Kaizen.Server.DataAccess/Kaizen.Server.DataAccess.csproj"
+    },
+    "Kaizen.Server.Entity/1.0.0": {
+      "type": "project",
+      "path": "../Kaizen.Server.Entity/Kaizen.Server.Entity.csproj",
+      "msbuildProject": "../Kaizen.Server.Entity/Kaizen.Server.Entity.csproj"
     },
     "Kaizen.Server.Repository/1.0.0": {
       "type": "project",

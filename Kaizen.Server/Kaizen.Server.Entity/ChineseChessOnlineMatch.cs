@@ -1,7 +1,7 @@
 using System;
 using Kaizen.Server.Common.Enums;
 
-namespace Kaizen.Server.DataAccess.Models
+namespace Kaizen.Server.Entity
 {
     public class ChineseChessOnlineMatch
     {
