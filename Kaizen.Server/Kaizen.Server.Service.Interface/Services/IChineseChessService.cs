@@ -7,6 +7,8 @@ namespace Kaizen.Server.Service.Interface.Services
 {
     public interface IChineseChessService
     {
-        Task<IEnumerable<ChineseChessOnlineMatchModel>> GetAll();
+        Task<IEnumerable<ChineseChessOnlineMatchModel>> GetOnlineMatchs(PaginationModel pagination);
+
+        Task<IEnumerable<ChineseChessOnlineMatchModel>> GetOnlineMatchsByPeriod(PeriodModel period);
     }
 }

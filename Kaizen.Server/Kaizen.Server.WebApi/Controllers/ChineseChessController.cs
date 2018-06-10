@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Kaizen.Server.Service.Interface.Excpetions;
 using Kaizen.Server.Service.Interface.Models;
 using Kaizen.Server.Service.Interface.Services;
 using Microsoft.AspNetCore.Http;
@@ -20,14 +21,64 @@ namespace Kaizen.Server.WebApi.Controllers
             _chineseChessService = chineseChessService;
         }
 
+        #region OnlineMatch
+
         // GET api/chinese-chess
         [HttpGet]
         [Route("online-matchs")]
         [ProducesResponseType(typeof(IEnumerable<ChineseChessOnlineMatchModel>), StatusCodes.Status200OK)]
-        public async Task<IActionResult> Get()
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetOnlineMatchs([FromQuery] PaginationModel pagination)
         {
-            IEnumerable<ChineseChessOnlineMatchModel> models = await _chineseChessService.GetAll();
-            return Ok(models);
+            try
+            {
+                IEnumerable<ChineseChessOnlineMatchModel> models = await _chineseChessService.GetOnlineMatchs(pagination);
+                return Ok(models);
+            }
+            catch (PageNumberNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (InvalidPageSizeException ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
         }
+
+        // GET api/chinese-chess
+        [HttpGet]
+        [Route("online-matchs")]
+        [ProducesResponseType(typeof(IEnumerable<ChineseChessOnlineMatchModel>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetOnlineMatchsByPeriod([FromQuery] PeriodModel period)
+        {
+            try
+            {
+                IEnumerable<ChineseChessOnlineMatchModel> models = await _chineseChessService.GetOnlineMatchsByPeriod(period);
+                return Ok(models);
+            }
+            catch (PeriodNullException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (InvalidPeriodException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
+
+        }
+
+        #endregion;
+        
     }
 }
